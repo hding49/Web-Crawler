@@ -57,28 +57,3 @@ for (i =0; i<9; i+=10)
 
 }
 
-
-
-
-
-
-
-
-
-
-// const queryOptions = {
-//     host: 'www.indeed.com',
-//     query: 'Web Developer',
-//     city: 'Toronto, CA',
-//     radius: '50',
-//     level: 'entry_level',
-//     jobType: 'fulltime',
-//     maxAge: '7',
-//     sort: 'date',
-//     limit: 2
-//   };
-  
-//   indeed.query(queryOptions).then(res => {
-//       console.log(res); // An array of Job objects
-//   });
-
