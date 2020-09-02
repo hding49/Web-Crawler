@@ -19,7 +19,7 @@ mongoose
   });
 
 
-for (i =0; i<10; i+=10)
+for (i =0; i<380; i+=10)
 {
     axios.get('https://ca.indeed.com/jobs?q=web+developer&l=Ontario&start=' + i).then((res) => {
 
