@@ -17,7 +17,8 @@ mongoose
     console.log('database connection error');
   });
 
-for (i =0; i<9; i+=10)
+
+for (i =0; i<380; i+=10)
 {
     axios.get('https://ca.indeed.com/jobs?q=web+developer&l=Ontario&start=' + i).then((res) => {
 
@@ -30,8 +31,6 @@ for (i =0; i<9; i+=10)
             const title = $(element).find('.title a').eq(j).text();
             const company = $(element).find('.sjcl div span.company').eq(j).text();
             const summary = $(element).find('.summary').eq(j).text();
-            
-            // data[index] = {title, company, summary};
 
             var job = new Job({
                 title: title,
@@ -43,11 +42,10 @@ for (i =0; i<9; i+=10)
                 if (err) {
                     console.log('error')
                     return;
-                }                                                               
-                console.log('success');
+                }   
+                console.log('success')                                                            
             })
-
-            
+          
         }
         
       });
@@ -56,29 +54,3 @@ for (i =0; i<9; i+=10)
 })
 
 }
-
-
-
-
-
-
-
-
-
-
-// const queryOptions = {
-//     host: 'www.indeed.com',
-//     query: 'Web Developer',
-//     city: 'Toronto, CA',
-//     radius: '50',
-//     level: 'entry_level',
-//     jobType: 'fulltime',
-//     maxAge: '7',
-//     sort: 'date',
-//     limit: 2
-//   };
-  
-//   indeed.query(queryOptions).then(res => {
-//       console.log(res); // An array of Job objects
-//   });
-
