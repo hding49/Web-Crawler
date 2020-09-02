@@ -6,4 +6,4 @@ const JobSchema = new mongoose.Schema(
     summary: {type: String, required: true},
  });
 
-module.exports = mongoose.model('job', JobSchema);
+module.exports = mongoose.model('Product', JobSchema);
